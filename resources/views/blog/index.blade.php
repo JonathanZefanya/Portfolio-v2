@@ -22,7 +22,8 @@
             {{-- categories --}}
             <div class=" flex flex-wrap gap-3">
                 @foreach ($categories as $category)
-                    <a href="{{ route('category.show', $category->slug) }}"
+                    <!-- <a href="{{ route('category.show', $category->slug) }}" -->
+                    <a href="#"
                         class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-sm font-medium  px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400 inline-flex items-center justify-center">
                         {{ $category->name }}
                     </a>
@@ -39,7 +40,8 @@
                         <span
                             class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $post->categories->name }}</span>
                     </div>
-                    <a href="{{ route('post.show', $post->slug) }}">
+                    <!-- <a href="{{ route('post.show', $post->slug) }}"> -->
+                    <a href="#">
                         <h5
                             class="hover:text-blue-600 duration-100 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{ $post->title }}</h5>
