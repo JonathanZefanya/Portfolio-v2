@@ -3,7 +3,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
+                    <img src="https://icon-library.com/images/icon-anime/icon-anime-23.jpg" class="h-8 me-3" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jonathan Natannael Zefanya</span>
                 </a>
             </div>
