@@ -11,10 +11,10 @@ TailwindCSS, Flowbite
 Laragon, MySQL, Laravel
 
 ## Run Project
-```composer install<br>npm install```<br>
-```cp .env.example .env```
-```php artisan key:generate```
-```php artisan migrate --seed```
-```php artisan storage:link```
-```php artisan serve```
-```npm run dev```
+```composer install npm install```<br>
+```cp .env.example .env``` <br>
+```php artisan key:generate``` <br>
+```php artisan migrate --seed``` <br>
+```php artisan storage:link``` <br>
+```php artisan serve``` <br>
+```npm run dev``` <br>
