@@ -81,12 +81,42 @@ class ProjectController extends Controller
         return view('project.edit', ['project' => $project]);
     }
 
+    // Update binding untuk menggunakan slug di model Project
+    public function resolveRouteBinding($value, $field = null)
+    {
+        return $this->where('slug', $value)->firstOrFail();
+    }
+
+
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Project $project)
     {
+        $request->validate([
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
+            'image' => ['image', 'mimes:png,jpg,jpeg'],
+            'link' => ['required', 'string'],
+        ]);
+
+        // Update project data
+        $project->title = $request->title;
+        $project->slug = Str::slug($request->title);
+        $project->description = $request->description;
+        $project->link = $request->link;
+
+        // Handle image update if provided
+        if ($request->hasFile('image')) {
+            Storage::delete($project->image);
+            $project->image = $request->file('image')->store('public/project_images');
+        }
+
+        $project->save();
+
+        return redirect()->route('project.index')->with('success', 'Project has been updated');
     }
+
 
     /**
      * Remove the specified resource from storage.

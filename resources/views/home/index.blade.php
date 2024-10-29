@@ -55,12 +55,8 @@
                     <p class=" font-light md:text-xl ">Get to know me</p>
                 </div>
                 <div class="text-center md:text-left">
-                    <p> I am a person who is interested in technology, especially in the field of Web development. now I
-                        am a student at Bina Sarana Informatika University majoring in Information Systems. I am 22
-                        years old and I live in Larangan, Tangerang. I am a person who likes to face challenges and work
-                        in teams but does not rule out the possibility that I can work independently. I am always eager
-                        to learn more, especially in the field of technology.
-
+                    <p>Saya berumur 20 Tahun dan sekarang sedang menjalani perkuliahan semester 5 di Institut Teknologi Indonesia di Jurusan Teknik Informatika. saya memiliki hobi bermain game dan juga 
+                        saya memiliki hobi untuk mengembangkan bakat saya dalam bidang IT.
                     </p>
                 </div>
                 <div class=" space-y-3 md:space-y-4">
@@ -101,9 +97,9 @@
 
                     </div>
                     <div class="text-center md:text-left">
-                        <button type="button"
+                        <a href="https://jonathanzefanya.github.io/MyCV/" target="blank"><button type="button"
                             class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-gray-300 dark:hover:bg-gray-700">Download
-                            CV</button>
+                            CV</button></a>
                     </div>
                 </div>
 
@@ -159,6 +155,15 @@
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
                     </div>
+                    <div data-tooltip-target="tooltip-dart"
+                        class="flex  place-content-center hover:scale-125 transition-all duration-300 ">
+                        <img src="assets/img/skill/dart.webp" class=" self-center w-28 md:w-36" alt="">
+                        <div id="tooltip-dart" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-gray-900 bg-gray-100 border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
+                            Dart
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
                     <div data-tooltip-target="tooltip-bootstrap"
                         class="flex   place-content-center hover:scale-125 transition-all duration-300 ">
                         <img src="assets/img/skill/bootstrap.png" class=" w-28 md:w-36" alt="">
@@ -186,6 +191,15 @@
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
                     </div>
+                    <div data-tooltip-target="tooltip-postgresql"
+                        class="flex  place-content-center hover:scale-125 transition-all duration-300 ">
+                        <img src="assets/img/skill/postgreeSQL.avif" class=" self-center w-28 md:w-36" alt="">
+                        <div id="tooltip-postgresql" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-gray-900 bg-gray-100 border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
+                            Database PostgreeSQL
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
                     <div data-tooltip-target="tooltip-ci"
                         class="flex   place-content-center hover:scale-125 transition-all duration-300 ">
                         <img src="assets/img/skill/codeigniter.png" class=" w-28 md:w-32" alt="">
@@ -201,6 +215,15 @@
                         <div id="tooltip-laravel" role="tooltip"
                             class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-gray-900 bg-gray-100 border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
                             Laravel
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                    <div data-tooltip-target="tooltip-flutter"
+                        class="flex  place-content-center hover:scale-125 transition-all duration-300 ">
+                        <img src="assets/img/skill/flutter.png" class=" self-center w-28 md:w-36" alt="">
+                        <div id="tooltip-flutter" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-gray-900 bg-gray-100 border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
+                            Flutter
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
                     </div>

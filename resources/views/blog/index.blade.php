@@ -1,12 +1,16 @@
 <x-app-layout title="Blog">
 
-    <div style="background-image: url('assets/img/blog.jpg')"
-        class="w-full h-screen bg-cover bg-bottom bg-fixed border-b-2 border-b-blue-500">
-        <div class="relative top-[44%] px-4 space-y-1  md:text-center md:text-gray-700">
-            <h1 class="text-5xl font-bold md:text-6xl">Blog</h1>
-            <p class="text-xl md:text-2xl ">where all thoughts are written down</p>
+    <div style="background-image: url('assets/img/VSC-bg.png')" class="w-full h-screen bg-cover bg-bottom bg-fixed border-b-2 border-b-blue-500">
+        <div class="relative top-[44%] px-4 space-y-1 md:text-center md:text-gray-700">
+            <h1 class="text-5xl font-bold md:text-6xl text-white drop-shadow-lg">
+                <i class="fas fa-pen"></i> Blog
+            </h1>
+            <p class="text-xl md:text-2xl text-white drop-shadow-md">
+                Jonathan Blogspot Pribadi
+            </p>
         </div>
     </div>
+
 
 
     <x-container>

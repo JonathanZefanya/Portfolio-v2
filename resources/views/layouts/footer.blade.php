@@ -12,13 +12,13 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="https://flowbite.com/" class="hover:underline">Laravel</a>
+                            <a href="https://laravel.com/" class="hover:underline">Laravel</a>
                         </li>
                         <li class="mb-4">
                             <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
                         </li>
                         <li>
-                            <a href="https://tailwindcss.com/" class="hover:underline">Flowbite</a>
+                            <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
                         </li>
                     </ul>
                 </div>
@@ -26,16 +26,16 @@
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Social</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
-                            <a href="https://github.com/Jonathan Zefanya" class="hover:underline ">Github</a>
+                            <a href="https://github.com/JonathanZefanya" class="hover:underline ">Github</a>
                         </li>
                         <li class="mb-4">
-                            <a href="" class="hover:underline">LinkedIn</a>
+                            <a href="#" class="hover:underline">LinkedIn</a>
                         </li>
                         <li class="mb-4">
-                            <a href="" class="hover:underline">Facebook</a>
+                            <a href="#" class="hover:underline">Facebook</a>
                         </li>
                         <li class="mb-4">
-                            <a href="" class="hover:underline">Instagram</a>
+                            <a href="#" class="hover:underline">Instagram</a>
                         </li>
                     </ul>
                 </div>
@@ -46,13 +46,13 @@
                             <a href="{{ route('home') }}" class="hover:underline">Home</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#about" class="hover:underline">About</a>
+                            <a href="{{ route('home') }}#about" class="hover:underline">About</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#skills" class="hover:underline">Skills</a>
+                            <a href="{{ route('home') }}#skills" class="hover:underline">Skills</a>
                         </li>
                         <li class="">
-                            <a href="" class="hover:underline">Blog</a>
+                            <a href="/blog" class="hover:underline">Blog</a>
                         </li>
                     </ul>
                 </div>
