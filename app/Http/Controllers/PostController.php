@@ -97,42 +97,38 @@ class PostController extends Controller
             'title' => 'required|string|min:3',
             'description' => 'required|string|min:5',
             'content' => 'required',
-            'image' => 'image|mimes:png,jpg,jpeg',
+            'body_image' => 'image|mimes:png,jpg,jpeg',
         ]);
 
         try {
-            // Handle file upload if a new image is uploaded
+            // Check and update image if a new one is uploaded
             if ($request->hasFile('body_image')) {
-                // Delete old image
                 if ($post->body_image && Storage::exists($post->body_image)) {
                     Storage::delete($post->body_image);
                 }
-
-                // Store the new image
                 $imagePath = $request->file('body_image')->store('public/post-images');
                 $post->body_image = $imagePath;
             }
 
-            // Update the post with new data
+            // Update other fields
             $post->title = $request->title;
             $post->slug = Str::slug($request->title);
             $post->description = $request->description;
             $post->body = $request->content;
             $post->user_id = Auth::id();
 
-            // Save the post and check if it's successful
+            // Save the changes
             if ($post->save()) {
                 return redirect()->route('post.index')->with('success', 'Post has been updated!');
             } else {
                 return back()->with('error', 'Failed to update the post.');
             }
-
         } catch (\Exception $e) {
-            // Log the exception for debugging
             \Log::error('Post update failed: ' . $e->getMessage());
             return back()->with('error', 'An error occurred while updating the post.');
         }
     }
+
 
 
 
