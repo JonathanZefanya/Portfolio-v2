@@ -146,3 +146,116 @@
 .dropdown-item.dark\:text-white {
     color: white; 
 }
+
+/* Styling untuk container countdown */
+.countdown-container {
+    background-color: #f4f4f8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.countdown-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #6b46c1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Flex container untuk item countdown */
+.countdown-flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap; /* Agar bisa memuat ulang dalam baris baru */
+}
+
+/* Item countdown styling */
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.countdown-item:hover {
+    transform: scale(1.1);
+}
+
+/* Number styling */
+.countdown-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin: 0;
+}
+
+/* Label styling */
+.countdown-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* Animasi untuk angka */
+.countdown-number {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+
+/* Tablet dan perangkat berukuran sedang */
+@media (max-width: 768px) {
+    .countdown-title {
+        font-size: 1.1rem;
+    }
+    .countdown-item {
+        width: 70px;
+    }
+    .countdown-number {
+        font-size: 1.3rem;
+    }
+    .countdown-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* HP dan perangkat berukuran kecil */
+@media (max-width: 480px) {
+    .countdown-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    .countdown-title {
+        font-size: 1rem;
+    }
+    .countdown-flex {
+        gap: 5px;
+    }
+    .countdown-item {
+        width: 60px;
+    }
+    .countdown-number {
+        font-size: 1.1rem;
+    }
+    .countdown-label {
+        font-size: 0.65rem;
+    }
+}

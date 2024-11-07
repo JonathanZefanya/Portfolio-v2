@@ -14,6 +14,7 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'store'])->name('login.store');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('blog/{post:slug}', [PostController::class, 'show'])->name('post.show');
 
 
 // must Login
@@ -23,7 +24,7 @@ Route::middleware('auth')->group(function () {
     // Projects
     Route::resource('project', ProjectController::class);
     // Posts
-    Route::resource('post', PostController::class);
+    Route::resource('post', PostController::class)->except(['show']);
 });
 
 Route::get('blog', BlogController::class)->name('blog');

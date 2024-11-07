@@ -29,13 +29,13 @@
                             <a href="https://github.com/JonathanZefanya" class="hover:underline ">Github</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/jonathan-natannael-zefanya-212b9b25a/" class="hover:underline">LinkedIn</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Facebook</a>
+                            <a href="https://wa.me/6283807914090" class="hover:underline">Whatsapp</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Instagram</a>
+                            <a href="https://www.instagram.com/xeadesta/" class="hover:underline">Instagram</a>
                         </li>
                     </ul>
                 </div>
@@ -62,14 +62,16 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ date('Y') }} <a
                     href="/" class="hover:underline">Jonathan Natannael Zefanya
-                </a> created with<span>
-                    <svg class="w-4 h-4 inline-block text-red-700" clip-rule="evenodd" fill="currentColor"
-                        stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="m7.234 3.004c-2.652 0-5.234 1.829-5.234 5.177 0 3.725 4.345 7.727 9.303 12.54.194.189.446.283.697.283s.503-.094.697-.283c4.977-4.831 9.303-8.814 9.303-12.54 0-3.353-2.58-5.168-5.229-5.168-1.836 0-3.646.866-4.771 2.554-1.13-1.696-2.935-2.563-4.766-2.563zm0 1.5c1.99.001 3.202 1.353 4.155 2.7.14.198.368.316.611.317.243 0 .471-.117.612-.314.955-1.339 2.19-2.694 4.159-2.694 1.796 0 3.729 1.148 3.729 3.668 0 2.671-2.881 5.673-8.5 11.127-5.454-5.285-8.5-8.389-8.5-11.127 0-1.125.389-2.069 1.124-2.727.673-.604 1.625-.95 2.61-.95z"
+                </a> 
+                <span>
+                    <svg class="w-6 h-6 inline-block" clip-rule="evenodd" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Ikon kucing dengan detail wajah dan telinga -->
+                        <path d="M12 2c-1.1 0-2 .9-2 2h-.28c-2.2 0-4 1.8-4 4v1c0 .88.39 1.68 1 2.22V15c0 3.31 2.69 6 6 6s6-2.69 6-6v-3.78c.61-.54 1-1.34 1-2.22V8c0-2.21-1.8-4-4-4H14c0-1.1-.9-2-2-2zM8.5 10c-.83 0-1.5-.67-1.5-1.5S7.67 7 8.5 7s1.5.67 1.5 1.5S9.33 10 8.5 10zm7 0c-.83 0-1.5-.67-1.5-1.5S14.67 7 15.5 7s1.5.67 1.5 1.5S16.33 10 15.5 10z"
                             fill-rule="nonzero" />
-                    </svg></span>
+                        <!-- Hidung dan mulut kucing -->
+                        <path d="M11 14h2v1h-2zm-1 2h4v1h-4z" fill="#FFFFFF"/>
+                    </svg>
+                </span>
             </span>
             <div class="flex mt-4 sm:justify-center sm:mt-0">
                 <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">

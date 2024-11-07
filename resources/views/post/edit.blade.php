@@ -69,7 +69,12 @@
     </x-container>
 
     <script>
-        ClassicEditor.create(document.querySelector('#content'))
+        ClassicEditor
+        .create(document.querySelector('#content'), {
+            mediaEmbed: {
+                previewsInData: true // Enables the display of embedded content previews
+            }
+        })
             .catch(error => {
                 console.error(error);
             });

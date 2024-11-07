@@ -55,16 +55,69 @@
                     <p class=" font-light md:text-xl ">Get to know me</p>
                 </div>
                 <div class="text-center md:text-left">
-                    <p>Saya berumur 20 Tahun dan sekarang sedang menjalani perkuliahan semester 5 di Institut Teknologi Indonesia di Jurusan Teknik Informatika. saya memiliki hobi bermain game dan juga 
+                    <p>Saya berumur <span id="umur"></span> Tahun dan sekarang sedang menjalani perkuliahan semester 5 di Institut Teknologi Indonesia di Jurusan Teknik Informatika. saya memiliki hobi bermain game dan juga 
                         saya memiliki hobi untuk mengembangkan bakat saya dalam bidang IT.
                     </p>
+                    <br>
+                    <!-- buat countdown ultah ku dengan design yg bagus -->
+                    <div id="birthday-countdown" class="countdown-container">
+                    <p id="birthday-message" class="countdown-title">Countdown To Upgrade next age:</p>
+                    <div class="countdown-flex">
+                        <div class="countdown-item">
+                            <p id="years" class="countdown-number">0</p>
+                            <p class="countdown-label">Years</p>
+                        </div>
+                        <div class="countdown-item">
+                            <p id="months" class="countdown-number">0</p>
+                            <p class="countdown-label">Month</p>
+                        </div>
+                        <div class="countdown-item">
+                            <p id="days" class="countdown-number">0</p>
+                            <p class="countdown-label">Days</p>
+                        </div>
+                        <div class="countdown-item">
+                            <p id="hours" class="countdown-number">0</p>
+                            <p class="countdown-label">Hours</p>
+                        </div>
+                        <div class="countdown-item">
+                            <p id="minutes" class="countdown-number">0</p>
+                            <p class="countdown-label">Minutes</p>
+                        </div>
+                        <div class="countdown-item">
+                            <p id="seconds" class="countdown-number">0</p>
+                            <p class="countdown-label">Seconds</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- <script>
+                    function hitungUmur() {
+                        const tahunLahir = 2004;
+                        const bulanLahir = 10 - 1;
+                        const hariLahir = 16;
+                        
+                        const today = new Date();
+                        let umur = today.getFullYear() - tahunLahir;
+                        
+                        if (
+                            today.getMonth() < bulanLahir ||
+                            (today.getMonth() === bulanLahir && today.getDate() < hariLahir)
+                        ) {
+                            umur--;
+                        }
+
+                        document.getElementById("umur").textContent = umur;
+                    }
+
+                    hitungUmur();
+                </script> -->
+
                 <div class=" space-y-3 md:space-y-4">
                     <h1 class="text-center md:text-left  text-xl font-light">Connect with me</h1>
                     {{-- icons --}}
                     <div class="flex justify-center gap-5 md:justify-start md:gap-7">
                         <div>
-                            <a href=""
+                            <a href="https://www.instagram.com/xeadesta/"
                                 class="text-gray-600 hover:text-gray-900 duration-150  dark:hover:text-gray-400">
                                 <svg class=" w-6 h-6 md:w-8 md:h-8 hover:scale-105 duration-150" fill="currentColor"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -74,7 +127,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href=""
+                            <a href="https://github.com/JonathanZefanya"
                                 class=" text-gray-600 hover:text-gray-900 duration-150  dark:hover:text-gray-400">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="md:w-8 md:h-8  w-6 h-6 hover:scale-105 duration-150" fill="currentColor"
@@ -85,7 +138,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href=""
+                            <a href="https://www.linkedin.com/in/jonathan-natannael-zefanya-212b9b25a/"
                                 class="text-gray-600 hover:text-gray-900 duration-150  dark:hover:text-gray-400">
                                 <svg class="w-6 h-6 md:w-8 md:h-8  duration-150 hover:scale-105"
                                     xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
