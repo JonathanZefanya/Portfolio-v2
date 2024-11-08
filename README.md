@@ -48,6 +48,7 @@ To get the project up and running, follow these steps:
 ## Folder MYSQL(For Import)
 it's for import database if you don't want migration and seed database with php artisan,
 and it's had dummy data for project and post page
+
 ---
 
 Feel free to explore and contribute to the project. Happy coding!
