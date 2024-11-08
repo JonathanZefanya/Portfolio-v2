@@ -6,7 +6,7 @@
                 <i class="fas fa-pen"></i> Blog
             </h1>
             <p class="text-xl md:text-2xl text-white drop-shadow-md">
-                Jonathan Blogspot Pribadi
+                Jonathan's Blog
             </p>
         </div>
     </div>

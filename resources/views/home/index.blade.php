@@ -40,7 +40,7 @@
 
         <!-- Image Section -->
         <div class="absolute bottom-0 right-0 transform transition-all duration-700 ease-in-out hover:scale-105">
-            <img src="assets/img/hero.png" class="w-96 md:w-[484px] opacity-70 hover:opacity-90 drop-shadow-lg" alt="">
+            <img src="assets/img/hero1.png" class="w-96 md:w-[484px] opacity-70 hover:opacity-90 drop-shadow-lg" alt="">
         </div>
     </div>
 
