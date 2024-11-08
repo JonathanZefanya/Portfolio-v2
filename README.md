@@ -4,7 +4,7 @@ Welcome to my portfolio! This project is created using **Laravel 11**.
 
 ## Tech Stack
 - **Client:** TailwindCSS, Flowbite
-- **Server:** Laragon, MySQL, Laravel
+- **Server:** Laragon, MySQL, Laravel, Composer
 
 ## Run Project
 To get the project up and running, follow these steps:
