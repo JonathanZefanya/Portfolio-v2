@@ -55,13 +55,13 @@
                     <p class=" font-light md:text-xl ">Get to know me</p>
                 </div>
                 <div class="text-center md:text-left">
-                    <p>Saya berumur <span id="umur"></span> Tahun dan sekarang sedang menjalani perkuliahan semester 5 di Institut Teknologi Indonesia di Jurusan Teknik Informatika. saya memiliki hobi bermain game dan juga 
+                    <p>Saya berumur <span id="umur"></span> tahun dan sekarang sedang menjalani perkuliahan semester 5 di Institut Teknologi Indonesia di Jurusan Teknik Informatika. saya memiliki hobi bermain game dan juga 
                         saya memiliki hobi untuk mengembangkan bakat saya dalam bidang IT.
                     </p>
                     <br>
                     <!-- buat countdown ultah ku dengan design yg bagus -->
                     <div id="birthday-countdown" class="countdown-container">
-                    <p id="birthday-message" class="countdown-title">Countdown To Upgrade next age:</p>
+                    <p id="birthday-message" class="countdown-title">Countdown To Upgrade My Age:</p>
                     <div class="countdown-flex">
                         <div class="countdown-item">
                             <p id="years" class="countdown-number">0</p>

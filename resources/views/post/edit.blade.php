@@ -73,6 +73,9 @@
         .create(document.querySelector('#content'), {
             mediaEmbed: {
                 previewsInData: true // Enables the display of embedded content previews
+            },
+            ckfinder: {
+                    uploadUrl: '{{ route("image.upload") }}?_token={{ csrf_token() }}'
             }
         })
             .catch(error => {

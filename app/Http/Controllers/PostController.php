@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -128,6 +129,32 @@ class PostController extends Controller
             return back()->with('error', 'An error occurred while updating the post.');
         }
     }
+
+    public function uploadImage(Request $request): JsonResponse
+    {
+        if ($request->hasFile('upload')) {
+            $file = $request->file('upload');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $filePath = $file->storeAs('public/uploads', $fileName);
+
+            // URL gambar yang diupload
+            $url = Storage::url($filePath);
+
+            // Kembalikan response JSON dengan URL gambar
+            return response()->json([
+                'uploaded' => true,
+                'url' => $url
+            ]);
+        }
+
+        return response()->json([
+            'uploaded' => false,
+            'error' => [
+                'message' => 'Image upload failed!'
+            ]
+        ]);
+    }
+
 
 
 

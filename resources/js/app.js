@@ -55,7 +55,7 @@ function countDownMyBirthday() {
     if (diffTime <= 0) {
         document.getElementById("birthday-message").textContent = "Happy Birthday!";
     } else {
-        document.getElementById("birthday-message").textContent = "Countdown to my next Birthday:";
+        document.getElementById("birthday-message").textContent = "Countdown To Upgrade My Age:";
     }
 
     // Update countdown setiap detik
