@@ -1,4 +1,20 @@
 <x-app-layout title="{{ $post->title }}">
+<head>
+    <meta property="og:title" content="{{ $post->title }}" />
+    <meta property="og:description" content="{{ $post->description }}" />
+    <meta property="og:image" content="{{ asset('storage/' . $post->body_image) }}" />
+    <meta property="og:url" content="{{ request()->fullUrl() }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Nama Situs Anda" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ $post->title }}" />
+    <meta name="twitter:description" content="{{ $post->description }}" />
+    <meta name="twitter:image" content="{{ asset('storage/' . $post->body_image) }}" />
+    <meta name="twitter:url" content="{{ request()->fullUrl() }}" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+</head>
     <style> 
         .bold-line { 
             border: 0; 
@@ -73,7 +89,7 @@
 
                         <button onclick="copyToClipboard()" class="flex items-center text-gray-600 hover:text-gray-800">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5h10a3 3 0 0 1 3 3v11a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zm0-2A5 5 0 0 0 3 8v11a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V8a5 5 0 0 0-5-5H8zM16 1a1 1 0 1 1 0 2h-5a1 1 0 0 1 0-2h5z"/>
+                                <path d="M19 3h-4.18C14.403 1.837 13.303 1 12 1s-2.403.837-2.82 2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM12 3c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm7 16H5V5h4.18c.417 1.163 1.517 2 2.82 2s2.403-.837 2.82-2H19v14z"/>
                             </svg> 
                             Copy Link
                         </button>
@@ -84,16 +100,25 @@
     </section>
 
     <!-- JavaScript for Copy Link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function copyToClipboard() {
-            const url = "{{ request()->fullUrl() }}";
-            navigator.clipboard.writeText(url)
-                .then(() => {
-                    alert("Link copied to clipboard!");
-                })
-                .catch(err => {
-                    console.error("Could not copy text: ", err);
+            const link = "{{ request()->fullUrl() }}";
+            navigator.clipboard.writeText(link).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Link Copied!',
+                    text: 'You can now share the link.',
+                    timer: 2000,
+                    showConfirmButton: false
                 });
+            }).catch(err => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops!',
+                    text: 'Failed to copy link.',
+                });
+            });
         }
     </script>
 </x-app-layout>
