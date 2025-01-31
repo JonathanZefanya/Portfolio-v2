@@ -40,8 +40,10 @@
                         <span
                             class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $post->categories->name }}</span>
                     </div>
-                    <!-- <a href="{{ route('post.show', $post->slug) }}"> -->
-                    <a href="#">
+                    <a href="{{ route('post.show', $post->slug) }}">
+                    <!-- <a href="#"> -->
+                        <img src="{{ asset('storage/' . $post->body_image) }}" alt="{{ $post->title }}"
+                            class="w-full h-48 object-cover rounded-lg" />
                         <h5
                             class="hover:text-blue-600 duration-100 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{ $post->title }}</h5>
