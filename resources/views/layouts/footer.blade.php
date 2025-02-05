@@ -3,7 +3,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
-                    <img src="https://icon-library.com/images/icon-anime/icon-anime-23.jpg" class="h-8 me-3" alt="Logo" />
+                    <img src="https://icons.iconarchive.com/icons/vitorjapah/anime-dvd-cases/256/azu-manga-icon.png" class="h-8 me-3" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jonathan Natannael Zefanya</span>
                 </a>
             </div>
@@ -62,7 +62,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ date('Y') }} <a
                     href="/" class="hover:underline">Jonathan Natannael Zefanya
-                </a> 
+                </a> created with
                 <span>
                     <svg class="w-6 h-6 inline-block" clip-rule="evenodd" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <!-- Ikon kucing dengan detail wajah dan telinga -->

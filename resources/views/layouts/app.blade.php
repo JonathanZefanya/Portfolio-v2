@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Meta Deskripsi (maksimal 160 karakter) -->
+    <meta name="description" content="Portfolio Pribadi Saya.">
+
+    <!-- Kata Kunci SEO (Tidak terlalu penting untuk Google, tapi bisa untuk Bing/Yandex) -->
+    <meta name="keywords" content="jonathan, portfolio, personal, website, blog, laravel, php, javascript, html, css, natannael, zefanya, jonathan nathannael zefanya, nathannael, portfolio">
+
+    <!-- Nama Pemilik atau Penulis -->
+    <meta name="author" content="Jonathan Natannnael Zefanya">
+
+    <!-- Canonical URL (untuk menghindari duplikat konten) -->
+    <link rel="canonical" href="https://xead.my.id/">
+
+    <!-- Open Graph untuk Sosial Media (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Portfolio - Jonathan Natannael Zefanya">
+    <meta property="og:description" content="Halo, saya Jonathan Natannael Zefanya. Saya seorang Web Developer yang suka menulis artikel tentang teknologi.">
+    <meta property="og:image" content="https://icons.iconarchive.com/icons/vitorjapah/anime-dvd-cases/256/azu-manga-icon.png">
+    <meta property="og:url" content="https://xead.my.id/">
+    <meta property="og:type" content="website">
+
+    <!-- Meta Robots (Mengizinkan Google untuk mengindeks halaman ini) -->
+    <meta name="robots" content="index, follow">
+
     {{-- fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
