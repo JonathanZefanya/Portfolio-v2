@@ -13,10 +13,23 @@ class BlogController extends Controller
      */
     public function __invoke(Request $request)
     {
-
+        $categorySlug = $request->query('category');
+    
+        $categories = Category::latest()->get();
+        $posts = Post::latest();
+    
+        if ($categorySlug) {
+            $category = Category::where('slug', $categorySlug)->first();
+            if ($category) {
+                $posts->where('category_id', $category->id);
+            }
+        }
+    
         return view('blog.index', [
-            'categories' => Category::latest()->get(),
-            'posts' => Post::latest()->get()
+            'categories' => $categories,
+            'posts' => $posts->get(),
+            'selectedCategory' => $categorySlug
         ]);
     }
+    
 }

@@ -17,11 +17,27 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $query = Post::query();
 
+        if ($request->has('category')) {
+            $category = Category::where('slug', $request->category)->first();
+            if ($category) {
+                $query->where('category_id', $category->id);
+            }
+        }
 
-        return view('post.index', ['posts' => Post::all()]);
+        return view('post.index', [
+            'posts' => $query->get(),
+            'categories' => Category::all(),
+            'selectedCategory' => $request->category ?? ''
+        ]);
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'category_id');
     }
 
     /**

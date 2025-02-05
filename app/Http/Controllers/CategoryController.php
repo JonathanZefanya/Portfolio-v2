@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use GuzzleHttp\Psr7\Request as Psr7Request;
+use App\Models\Post;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Factory;
@@ -13,15 +14,32 @@ use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Unique;
 
+
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('category.index');
+        $query = Post::latest();
+
+        // Filter berdasarkan kategori jika ada parameter di URL
+        if ($request->has('categories')) {
+            $category = Category::where('slug', $request->category)->first();
+
+            if ($category) {
+                $query->where('category_id', $category->id);
+            }
+        }
+
+        return view('category.index', [
+            'categories' => Category::latest()->get(),
+            'selectedCategory' => $request->category ?? ''
+        ]);
+
     }
+
 
     // /**
     //  * Show the form for creating a new resource.
@@ -75,7 +93,14 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
+        $posts = $category->posts()->latest()->get();
+
+        return view('category.show', [
+            'category' => $category,
+            'posts' => $posts
+        ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
