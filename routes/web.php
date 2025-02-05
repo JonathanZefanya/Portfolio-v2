@@ -16,7 +16,6 @@ Route::post('login', [LoginController::class, 'store'])->name('login.store');
 Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/upload-image', [PostController::class, 'uploadImage'])->name('image.upload');
 Route::get('blog/{post:slug}', [PostController::class, 'show'])->name('post.show');
-Route::get('category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 
 
 // must Login
