@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
             *{
@@ -268,6 +269,9 @@
     const ThemeBtn = $("#theme-btn");
     const DeleteBtn = $("#delete-btn");
 
+    // saat send button atau enter di klik untuk mengirimkan pesan, pesan akan terhapus di text area
+
+
     let UserPrompt = null;
 
     const CreateElement = (html, ClassName) => {
@@ -354,12 +358,16 @@
     const OutgoinChat = () => {
         UserPrompt = PromptInput.val().trim();
         if (!UserPrompt) return;
+
+        // Hapus teks di textarea segera setelah tombol "Send" ditekan
+        PromptInput.val("");
+
         const html = `<div class="chat-content-box">
-                            <div class="chat-details">
-                                <img src="https://charmouthtennisclub.org/wp-content/uploads/2021/01/placeholder-400x400.jpg" alt="user-image">
-                                <p></p>
-                            </div>
-                        </div>`;
+                        <div class="chat-details">
+                            <img src="https://charmouthtennisclub.org/wp-content/uploads/2021/01/placeholder-400x400.jpg" alt="user-image">
+                            <p></p>
+                        </div>
+                    </div>`;
         const OutgoinChatDiv = CreateElement(html, "outgoing");
         ChatContainer.append(OutgoinChatDiv);
         OutgoinChatDiv.find("p").text(UserPrompt);
@@ -368,6 +376,7 @@
         setTimeout(TypyingAnimation, 500);
     };
 
+
     ThemeBtn.on("click", () => {
         $("body").toggleClass("light-mode");
         localStorage.setItem("Theme-Switcher", ThemeBtn.text());
@@ -375,11 +384,33 @@
     });
 
     DeleteBtn.on("click", () => {
-        if (confirm("Apakah Anda yakin ingin menghapus semua chat?")) {
-            localStorage.removeItem("All-Chats");
-        }
-        DataFromLocalStorage();
+        Swal.fire({
+            title: "Apakah Anda yakin?",
+            text: "Semua chat akan dihapus secara permanen!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Ya, hapus!",
+            cancelButtonText: "Batal",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                localStorage.removeItem("All-Chats");
+
+                Swal.fire({
+                    title: "Terhapus!",
+                    text: "Semua chat telah dihapus.",
+                    icon: "success",
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+
+                // Perbarui tampilan setelah penghapusan
+                DataFromLocalStorage();
+            }
+        });
     });
+
 
     let InitialHeight = PromptInput.prop("scrollHeight");
 
