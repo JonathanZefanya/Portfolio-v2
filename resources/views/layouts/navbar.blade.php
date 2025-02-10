@@ -1,4 +1,4 @@
-<nav class="navbar fixed top-0 w-full bg-white dark:bg-gray-900 shadow-md z-50 border-b border-gray-200 dark:border-gray-700">
+<nav class="navbar fixed top-0 w-full bg-white dark:bg-gray-900 shadow-md z-50 border-b border-gray-200 dark:border-gray-700" style="background-color: rgb(17 24 39 / var(--tw-bg-opacity));">
     <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
         <a href="{{ route('home') }}" class="text-xl font-bold text-blue-600 dark:text-blue-400">Portfolio</a>
         <button data-collapse-toggle="navbar-dropdown" type="button"
@@ -21,6 +21,9 @@
                 </li>
                 <li>
                     <a href="{{ route('blog') }}" class="nav-link">Blog</a>
+                </li>
+                <li>
+                    <a href="{{ url('chat') }}" class="nav-link">Chat Me</a>
                 </li>
                 @auth
                 <li class="relative">
